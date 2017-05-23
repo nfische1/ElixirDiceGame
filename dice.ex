@@ -3,10 +3,10 @@ defmodule Dice do
 
   dice1 = IO.puts Enum.random([1,2,3,4,5,6])
   dice2 = IO.puts Enum.random([1,2,3,4,5,6])
-  total = dice1 ++ dice2
-  IO.puts total
-  #IO.puts " You rolled a dice1 : #{dice1} <>"
-      #{}"<> and #{dice2}.That gives you a total of total : #{total}"
+  total = IO.puts dice1 ++ dice2
+
+  IO.puts " You rolled a dice1 : #{dice1} <>"
+      "<> and #{dice2}.That gives you a total of total : #{total}"
     cond do
        total == 7 ->
         IO.puts "You Win."
