@@ -1,18 +1,18 @@
 defmodule Dice do
-       IO.puts "This is a dice rolling game"
-    def roll_dice do
-      di1 = Enum.shuffle(6)
-      di2 = Enum.shuffle(6)
-      total = fn (di1,di2) -> di1 + di2 end
-        IO.puts " You rolled a #{di1} and a #{di2}.<>"
-            "<> That gives you a total of #{total}"
+ IO.puts "This is a dice rolling game"
+
+  dice1 = IO.puts Enum.random([1,2,3,4,5,6])
+  dice2 = IO.puts Enum.random([1,2,3,4,5,6])
+  total = dice1 ++ dice2
+  IO.puts total
+  #IO.puts " You rolled a dice1 : #{dice1} <>"
+      #{}"<> and #{dice2}.That gives you a total of total : #{total}"
     cond do
-      roll_dice.total == 7 ->
+       total == 7 ->
         IO.puts "You Win."
-      roll_dice.total == 2 ->
+      total == 2 ->
         IO.puts "Snake Eyes. You Lose."
       true ->
         IO.puts "It's a Draw."
     end
-  end
 end
