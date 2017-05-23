@@ -1,12 +1,16 @@
 defmodule Dice do
  IO.puts "This is a dice rolling game"
 
-  dice1 = IO.puts Enum.random([1,2,3,4,5,6])
-  dice2 = IO.puts Enum.random([1,2,3,4,5,6])
-  total = IO.puts dice1 ++ dice2
+  dice1 = ([1,2,3,4,5,6])
+  val1 = Enum.random(dice1)
+  dice2 = ([1,2,3,4,5,6])
+  val2 = Enum.random(dice2)
+  total = val1 + val2
 
-  IO.puts " You rolled a #{dice1} <>"
-      "<> " and a #{dice2}.That gives you a total of #{total}"
+  IO.puts """ 
+          You rolled a #{val1}
+          and #{val2}.That gives you a total of total :#{total}
+          """
     cond do
        total == 7 ->
         IO.puts "You Win."
